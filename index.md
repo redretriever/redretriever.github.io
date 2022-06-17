@@ -3,7 +3,7 @@ title: HOME
 ---
 
 ## このサイトについて
-個人的なWebプログラミングのメモをまとめています。
+個人的なWebプログラミング（PHP、JavaScript、HTML、CSSなど）のメモをまとめています。
 
 ### 関連リンク
 - [GitHubアカウント](https://github.com/redretriever)
