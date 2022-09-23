@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kintone on Redretriever Note</title>
+    <link>https://redretriever.github.io/categories/kintone/</link>
+    <description>Recent content in kintone on Redretriever Note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 11 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/categories/kintone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kintoneの一覧で設定されている絞り込み条件をJavaScriptで取得する</title>
+      <link>https://redretriever.github.io/post/kintone-get-list-filtering-criteria/</link>
+      <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/post/kintone-get-list-filtering-criteria/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+baseURL = 'https://redretriever.github.io/'
+languageCode = 'ja'
+title = 'Redretriever Note'
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+googleAnalytics = "UA-93586235-7"
+
+hasCJKLanguage = true
+summaryLength = 0
+
+publishDir = "docs"
+
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = ""
+  mainSections = ["post","posts"]
+  favicon = "img/favicon.ico"
+  dateFormat = "2006-01-02"
+  commit = false
+  rss = true
+  comments = false
+  readingTime = false
+  wordCount = false
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+  hideAuthor = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+[taxonomies]
+  category = "categories"
+
+[Author]
+  name = "redretriever"
+  website = "https://redretriever.github.io/"
+  github = "redretriever"
+#  twitter = "username"
+#  instagram = "username"
+#  youtube = "user/username" # or channel/channelname
+
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 1
+
+[[menu.main]]
+    name = "Posts"
+    url = "post/"
+    weight = 2
+
+[[menu.main]]
+    name = "Categories"
+    url = "categories/"
+    weight = 3

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WordPress on Redretriever Note</title>
+    <link>https://redretriever.github.io/categories/wordpress/</link>
+    <description>Recent content in WordPress on Redretriever Note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WordPressでアイキャッチ画像を有効にしたい</title>
+      <link>https://redretriever.github.io/post/wordpress-enable-featured-image/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/post/wordpress-enable-featured-image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPressのユーザープロフィールに独自項目（テキストボックス）を追加する</title>
+      <link>https://redretriever.github.io/post/add-original-item-to-user-profile/</link>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/post/add-original-item-to-user-profile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPressの一般設定に独自項目を追加する</title>
+      <link>https://redretriever.github.io/post/wp-add-original-item-to-general-setting/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/post/wp-add-original-item-to-general-setting/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
