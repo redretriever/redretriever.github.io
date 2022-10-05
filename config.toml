@@ -38,6 +38,9 @@ publishDir = "docs"
 [taxonomies]
   category = "categories"
 
+[permalinks]
+    post = "/:slug/"
+
 [Author]
   name = "redretriever"
   website = "https://redretriever.github.io/"

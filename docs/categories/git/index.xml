@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ</title>
-      <link>https://redretriever.github.io/post/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh/</link>
+      <link>https://redretriever.github.io/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh/</link>
       <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://redretriever.github.io/post/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh/</guid>
+      <guid>https://redretriever.github.io/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh/</guid>
       <description></description>
     </item>
     

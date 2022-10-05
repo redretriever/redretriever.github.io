@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Localを使った環境でWordPressのバージョンを変える - Redretriever Note</title>
+  <title>Javascriptのalert、confirmで改行をする - Redretriever Note</title>
   <meta name="author" content="redretriever"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -43,8 +43,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/redretriever.github.io\/post\/local-change-wordpress-version\/",
-          "name": "Localを使った環境で word pressのバージョンを変える"
+          "@id": "https:\/\/redretriever.github.io\/javascript-alert-confirm-linefeed\/",
+          "name": "Javascriptのalert、confirmで改行をする"
         }
     }]
 }
@@ -55,15 +55,15 @@
   "author": {
     "name" : "redretriever"
   },
-  "headline": "Localを使った環境でWordPressのバージョンを変える",
+  "headline": "Javascriptのalert、confirmで改行をする",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  264 ,
-  "datePublished" : "2022-04-22T00:00:00",
-  "dateModified" : "2022-04-22T00:00:00",
+  "wordCount":  117 ,
+  "datePublished" : "2021-09-30T00:00:00",
+  "dateModified" : "2021-09-30T00:00:00",
   "image" : "https:\/\/redretriever.github.io\/",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/post\/local-change-wordpress-version\/",
+  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/javascript-alert-confirm-linefeed\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/redretriever.github.io\/",
@@ -77,12 +77,12 @@
 }
 </script>
 
-<meta property="og:title" content="Localを使った環境でWordPressのバージョンを変える" />
-<meta property="og:url" content="https://redretriever.github.io/post/local-change-wordpress-version/" />
+<meta property="og:title" content="Javascriptのalert、confirmで改行をする" />
+<meta property="og:url" content="https://redretriever.github.io/javascript-alert-confirm-linefeed/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Redretriever Note" />
 
-  <meta name="twitter:title" content="Localを使った環境でWordPressのバージョンを変える" />
+  <meta name="twitter:title" content="Javascriptのalert、confirmで改行をする" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://redretriever.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.103.1" />
@@ -223,7 +223,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Localを使った環境でWordPressのバージョンを変える</h1>
+                <h1>Javascriptのalert、confirmで改行をする</h1>
               
               
               
@@ -231,7 +231,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2022-04-22
+  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-09-30
   
   
   
@@ -255,18 +255,11 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>簡単に<strong>WordPress</strong>のローカル環境を構築できるツール「<a href="https://localwp.com/"><strong>Local</strong></a>」を使ったローカル環境で、WordPressのバージョンを変えたい時の作業メモ。</p>
-<h2 id="localでのwordpressのバージョン変更の方法">LocalでのWordPressのバージョン変更の方法</h2>
-<p>※記載時のLocalのバージョンは6.4.0+5927、端末はiMac（macOS Catalina 10.15.7）。</p>
-<ul>
-<li>変更したいサイトを選択し、Localのウィンドウ内の「Open site shell」をクリック</li>
-<li>開かれたターミナルで下記コマンドを実行
-<ul>
-<li>念のためプラグインの停止やバックアップをしておく</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">wp core update --version<span class="o">={</span>変更後のバージョン<span class="o">}</span> --force --locale<span class="o">=</span>ja
+        <p>JavaScriptのalert、confirmで表示する文言に改行を入れたい場合、改行したい箇所に¥nをいれると改行される</p>
+<h2 id="javascript">JavaScript</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;1行目¥n2行目&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;1行目¥n2行目&#39;</span><span class="p">);</span>
 </span></span></code></pre></div>
 
         
@@ -281,42 +274,42 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fpost%2flocal-change-wordpress-version%2f&amp;text=Local%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e7%92%b0%e5%a2%83%e3%81%a7WordPress%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e5%a4%89%e3%81%88%e3%82%8b&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fjavascript-alert-confirm-linefeed%2f&amp;text=Javascript%e3%81%aealert%e3%80%81confirm%e3%81%a7%e6%94%b9%e8%a1%8c%e3%82%92%e3%81%99%e3%82%8b&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fpost%2flocal-change-wordpress-version%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fjavascript-alert-confirm-linefeed%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2fpost%2flocal-change-wordpress-version%2f&amp;title=Local%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e7%92%b0%e5%a2%83%e3%81%a7WordPress%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e5%a4%89%e3%81%88%e3%82%8b" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2fjavascript-alert-confirm-linefeed%2f&amp;title=Javascript%e3%81%aealert%e3%80%81confirm%e3%81%a7%e6%94%b9%e8%a1%8c%e3%82%92%e3%81%99%e3%82%8b" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2fpost%2flocal-change-wordpress-version%2f&amp;title=Local%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e7%92%b0%e5%a2%83%e3%81%a7WordPress%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e5%a4%89%e3%81%88%e3%82%8b" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2fjavascript-alert-confirm-linefeed%2f&amp;title=Javascript%e3%81%aealert%e3%80%81confirm%e3%81%a7%e6%94%b9%e8%a1%8c%e3%82%92%e3%81%99%e3%82%8b" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2fpost%2flocal-change-wordpress-version%2f&amp;title=Local%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e7%92%b0%e5%a2%83%e3%81%a7WordPress%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e5%a4%89%e3%81%88%e3%82%8b" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2fjavascript-alert-confirm-linefeed%2f&amp;title=Javascript%e3%81%aealert%e3%80%81confirm%e3%81%a7%e6%94%b9%e8%a1%8c%e3%82%92%e3%81%99%e3%82%8b" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2fpost%2flocal-change-wordpress-version%2f&amp;description=Local%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%9f%e7%92%b0%e5%a2%83%e3%81%a7WordPress%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%92%e5%a4%89%e3%81%88%e3%82%8b" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2fjavascript-alert-confirm-linefeed%2f&amp;description=Javascript%e3%81%aealert%e3%80%81confirm%e3%81%a7%e6%94%b9%e8%a1%8c%e3%82%92%e3%81%99%e3%82%8b" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -339,12 +332,12 @@ if (!doNotTrack) {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://redretriever.github.io/post/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh/" data-toggle="tooltip" data-placement="top" title="GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ">&larr; Previous Post</a>
+              <a href="https://redretriever.github.io/kintone-get-list-filtering-criteria/" data-toggle="tooltip" data-placement="top" title="kintoneの一覧で設定されている絞り込み条件をJavaScriptで取得する">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://redretriever.github.io/post/php-get-defined-vars/" data-toggle="tooltip" data-placement="top" title="PHPで現在定義されている変数を確認する">Next Post &rarr;</a>
+              <a href="https://redretriever.github.io/%E7%B0%A1%E5%8D%98%E3%81%AB%E3%83%80%E3%83%9F%E3%83%BC%E7%94%BB%E5%83%8F%E3%82%92%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88placehold.jp/" data-toggle="tooltip" data-placement="top" title="簡単にダミー画像を作成できるサイト「Placehold.jp」">Next Post &rarr;</a>
             </li>
           
         </ul>

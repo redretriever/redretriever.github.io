@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Mac版Filezillaでファイルをダブルクリックしたときの挙動を変更 - Redretriever Note</title>
+  <title>WordPressの一般設定に独自項目を追加する - Redretriever Note</title>
   <meta name="author" content="redretriever"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -43,8 +43,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/redretriever.github.io\/post\/mac-filezilla-file-double-click\/",
-          "name": "Mac版 filezillaでファイルをダブルクリックしたときの挙動を変更"
+          "@id": "https:\/\/redretriever.github.io\/wp-add-original-item-to-general-setting\/",
+          "name": "Word pressの一般設定に独自項目を追加する"
         }
     }]
 }
@@ -55,15 +55,15 @@
   "author": {
     "name" : "redretriever"
   },
-  "headline": "Mac版Filezillaでファイルをダブルクリックしたときの挙動を変更",
+  "headline": "WordPressの一般設定に独自項目を追加する",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  386 ,
-  "datePublished" : "2021-10-30T00:00:00",
-  "dateModified" : "2021-10-30T00:00:00",
+  "wordCount":  200 ,
+  "datePublished" : "2021-08-09T00:00:00",
+  "dateModified" : "2021-08-09T00:00:00",
   "image" : "https:\/\/redretriever.github.io\/",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/post\/mac-filezilla-file-double-click\/",
+  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/wp-add-original-item-to-general-setting\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/redretriever.github.io\/",
@@ -77,12 +77,12 @@
 }
 </script>
 
-<meta property="og:title" content="Mac版Filezillaでファイルをダブルクリックしたときの挙動を変更" />
-<meta property="og:url" content="https://redretriever.github.io/post/mac-filezilla-file-double-click/" />
+<meta property="og:title" content="WordPressの一般設定に独自項目を追加する" />
+<meta property="og:url" content="https://redretriever.github.io/wp-add-original-item-to-general-setting/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Redretriever Note" />
 
-  <meta name="twitter:title" content="Mac版Filezillaでファイルをダブルクリックしたときの挙動を変更" />
+  <meta name="twitter:title" content="WordPressの一般設定に独自項目を追加する" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://redretriever.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.103.1" />
@@ -223,7 +223,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Mac版Filezillaでファイルをダブルクリックしたときの挙動を変更</h1>
+                <h1>WordPressの一般設定に独自項目を追加する</h1>
               
               
               
@@ -231,7 +231,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-10-30
+  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-08-09
   
   
   
@@ -255,20 +255,29 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>個人開発では主にMac版の<strong>Filezilla</strong>を使用しています。
-Filezillaはデフォルトでは、ファイルをダブルクリックした際に該当ファイルが転送（アップロード、ダウンロード）されます。
-これ、サーバにアップローダーしたファイルを微修正したりする際に馴染めず、別のプロジェクトのディレクトリに関係ないファイルをダウンロードしてしまったりしていました。</p>
-<p>そこでファイルをダブルクリックしたときの挙動を変更してみました。</p>
-<h2 id="設定変更内容">設定変更内容</h2>
-<p>※使用しているFilezillaのバージョンは3.56.2</p>
-<p><img src="/uploads/2021/10/2021-10-28-18.05.44-278x300.png" alt="Filezillaの設定変更">
-まずは「設定」をクリックし、設定画面を表示させる</p>
-<p><img src="/uploads/2021/10/2021-10-28-18.06.12-300x206.png" alt="Filezillaの設定変更">
-「インターフェイス」内の「ファイルリスト」を選択</p>
-<p><img src="/uploads/2021/10/2021-10-28-18.06.27-300x70.png" alt="Filezillaの設定変更">
-「ファイルをダブルクリックしたときのアクション」を「転送」から「表示/編集」に変更する</p>
-<p>これでファイルをダブルクリックした際に転送されるのではなく、エディタで表示、編集ができるようになりました。</p>
-
+        <p>WordPressの一般設定に独自項目を追加する実装方法メモ。
+下記はanalyticsのコードを登録するための独自項目追加のコード例。登録したい内容によってtextareaタグ部分を変更する。</p>
+<h2 id="php">PHP</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 各テーマのfunctions.php
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">function</span> <span class="nf">add_my_option_field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">add_settings_field</span><span class="p">(</span><span class="s1">&#39;analytics_code&#39;</span><span class="p">,</span> <span class="s1">&#39;Analyticsコード&#39;</span><span class="p">,</span> <span class="s1">&#39;display_analytics_option&#39;</span><span class="p">,</span> <span class="s1">&#39;general&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">register_setting</span><span class="p">(</span><span class="s1">&#39;general&#39;</span><span class="p">,</span> <span class="s1">&#39;analytics_code&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">add_filter</span><span class="p">(</span><span class="s1">&#39;admin_init&#39;</span><span class="p">,</span> <span class="s1">&#39;add_my_option_field&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">display_analytics_option</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$analytics_code</span> <span class="o">=</span> <span class="nx">get_option</span><span class="p">(</span><span class="s1">&#39;analytics_code&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;textarea name=&#34;analytics_code&#34; id=&#34;analytics_code&#34;&gt;&lt;?php echo esc_html($analytics_code); ?&gt;&lt;/textarea&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">}
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">// 各テーマのテンプレートファイルで、独自項目の値を出力したい場合
+</span></span></span><span class="line"><span class="cl"><span class="err">echo get_option(&#39;analytics_code&#39;);
+</span></span></span></code></pre></div>
 
         
 
@@ -282,42 +291,42 @@ Filezillaはデフォルトでは、ファイルをダブルクリックした�
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fpost%2fmac-filezilla-file-double-click%2f&amp;text=Mac%e7%89%88Filezilla%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%80%e3%83%96%e3%83%ab%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e3%81%97%e3%81%9f%e3%81%a8%e3%81%8d%e3%81%ae%e6%8c%99%e5%8b%95%e3%82%92%e5%a4%89%e6%9b%b4&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fwp-add-original-item-to-general-setting%2f&amp;text=WordPress%e3%81%ae%e4%b8%80%e8%88%ac%e8%a8%ad%e5%ae%9a%e3%81%ab%e7%8b%ac%e8%87%aa%e9%a0%85%e7%9b%ae%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fpost%2fmac-filezilla-file-double-click%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fwp-add-original-item-to-general-setting%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2fpost%2fmac-filezilla-file-double-click%2f&amp;title=Mac%e7%89%88Filezilla%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%80%e3%83%96%e3%83%ab%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e3%81%97%e3%81%9f%e3%81%a8%e3%81%8d%e3%81%ae%e6%8c%99%e5%8b%95%e3%82%92%e5%a4%89%e6%9b%b4" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2fwp-add-original-item-to-general-setting%2f&amp;title=WordPress%e3%81%ae%e4%b8%80%e8%88%ac%e8%a8%ad%e5%ae%9a%e3%81%ab%e7%8b%ac%e8%87%aa%e9%a0%85%e7%9b%ae%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2fpost%2fmac-filezilla-file-double-click%2f&amp;title=Mac%e7%89%88Filezilla%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%80%e3%83%96%e3%83%ab%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e3%81%97%e3%81%9f%e3%81%a8%e3%81%8d%e3%81%ae%e6%8c%99%e5%8b%95%e3%82%92%e5%a4%89%e6%9b%b4" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2fwp-add-original-item-to-general-setting%2f&amp;title=WordPress%e3%81%ae%e4%b8%80%e8%88%ac%e8%a8%ad%e5%ae%9a%e3%81%ab%e7%8b%ac%e8%87%aa%e9%a0%85%e7%9b%ae%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2fpost%2fmac-filezilla-file-double-click%2f&amp;title=Mac%e7%89%88Filezilla%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%80%e3%83%96%e3%83%ab%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e3%81%97%e3%81%9f%e3%81%a8%e3%81%8d%e3%81%ae%e6%8c%99%e5%8b%95%e3%82%92%e5%a4%89%e6%9b%b4" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2fwp-add-original-item-to-general-setting%2f&amp;title=WordPress%e3%81%ae%e4%b8%80%e8%88%ac%e8%a8%ad%e5%ae%9a%e3%81%ab%e7%8b%ac%e8%87%aa%e9%a0%85%e7%9b%ae%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2fpost%2fmac-filezilla-file-double-click%2f&amp;description=Mac%e7%89%88Filezilla%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e3%83%80%e3%83%96%e3%83%ab%e3%82%af%e3%83%aa%e3%83%83%e3%82%af%e3%81%97%e3%81%9f%e3%81%a8%e3%81%8d%e3%81%ae%e6%8c%99%e5%8b%95%e3%82%92%e5%a4%89%e6%9b%b4" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2fwp-add-original-item-to-general-setting%2f&amp;description=WordPress%e3%81%ae%e4%b8%80%e8%88%ac%e8%a8%ad%e5%ae%9a%e3%81%ab%e7%8b%ac%e8%87%aa%e9%a0%85%e7%9b%ae%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -340,12 +349,12 @@ Filezillaはデフォルトでは、ファイルをダブルクリックした�
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://redretriever.github.io/post/%E7%B0%A1%E5%8D%98%E3%81%AB%E3%83%80%E3%83%9F%E3%83%BC%E7%94%BB%E5%83%8F%E3%82%92%E4%BD%9C%E6%88%90%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88placehold.jp/" data-toggle="tooltip" data-placement="top" title="簡単にダミー画像を作成できるサイト「Placehold.jp」">&larr; Previous Post</a>
+              <a href="https://redretriever.github.io/jquery-disp-language-switch/" data-toggle="tooltip" data-placement="top" title="jQueryを使って簡易的に日英言語切り替えを実装する">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://redretriever.github.io/post/linux%E3%81%A7%E8%A4%87%E6%95%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92tar.gz%E3%81%AB%E5%9C%A7%E7%B8%AE%E8%A7%A3%E5%87%8D/" data-toggle="tooltip" data-placement="top" title="Linuxで複数ファイルをtar.gzに圧縮、解凍">Next Post &rarr;</a>
+              <a href="https://redretriever.github.io/add-original-item-to-user-profile/" data-toggle="tooltip" data-placement="top" title="WordPressのユーザープロフィールに独自項目（テキストボックス）を追加する">Next Post &rarr;</a>
             </li>
           
         </ul>

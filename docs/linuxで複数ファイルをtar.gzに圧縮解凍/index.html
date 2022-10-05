@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ - Redretriever Note</title>
+  <title>Linuxで複数ファイルをtar.gzに圧縮、解凍 - Redretriever Note</title>
   <meta name="author" content="redretriever"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -43,8 +43,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/redretriever.github.io\/post\/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh\/",
-          "name": "Git labに ssh接続するとき、 open sshのバージョンの問題でハマった時の解決メモ"
+          "@id": "https:\/\/redretriever.github.io\/linux%E3%81%A7%E8%A4%87%E6%95%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92tar.gz%E3%81%AB%E5%9C%A7%E7%B8%AE%E8%A7%A3%E5%87%8D\/",
+          "name": "Linuxで複数ファイルをtar.Gzに圧縮、解凍"
         }
     }]
 }
@@ -55,15 +55,15 @@
   "author": {
     "name" : "redretriever"
   },
-  "headline": "GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ",
+  "headline": "Linuxで複数ファイルをtar.gzに圧縮、解凍",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  497 ,
-  "datePublished" : "2022-01-23T00:00:00",
-  "dateModified" : "2022-01-23T00:00:00",
+  "wordCount":  290 ,
+  "datePublished" : "2021-11-10T00:00:00",
+  "dateModified" : "2021-11-10T00:00:00",
   "image" : "https:\/\/redretriever.github.io\/",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/post\/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh\/",
+  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/linux%E3%81%A7%E8%A4%87%E6%95%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92tar.gz%E3%81%AB%E5%9C%A7%E7%B8%AE%E8%A7%A3%E5%87%8D\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/redretriever.github.io\/",
@@ -77,12 +77,12 @@
 }
 </script>
 
-<meta property="og:title" content="GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ" />
-<meta property="og:url" content="https://redretriever.github.io/post/how-to-solve-the-problem-of-openssh-version-when-connecting-ssh/" />
+<meta property="og:title" content="Linuxで複数ファイルをtar.gzに圧縮、解凍" />
+<meta property="og:url" content="https://redretriever.github.io/linux%E3%81%A7%E8%A4%87%E6%95%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92tar.gz%E3%81%AB%E5%9C%A7%E7%B8%AE%E8%A7%A3%E5%87%8D/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Redretriever Note" />
 
-  <meta name="twitter:title" content="GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ" />
+  <meta name="twitter:title" content="Linuxで複数ファイルをtar.gzに圧縮、解凍" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://redretriever.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.103.1" />
@@ -223,7 +223,7 @@ if (!doNotTrack) {
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>GitLabにSSH接続するとき、OpenSSHのバージョンの問題でハマった時の解決メモ</h1>
+                <h1>Linuxで複数ファイルをtar.gzに圧縮、解凍</h1>
               
               
               
@@ -231,7 +231,7 @@ if (!doNotTrack) {
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2022-01-23
+  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-11-10
   
   
   
@@ -255,22 +255,23 @@ if (!doNotTrack) {
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>GitLabにSSH接続してレポジトリをクローンしようとした時に、<strong>公開鍵認証でなぜかエラーが起き、ハマってしまった時の解決方法</strong>のメモ。</p>
-<h2 id="発生した問題">発生した問題</h2>
-<p>とあるGitLabのレポジトリにSSH接続してローカル（windows10のノートパソコン）にクローンしてきたかった。</p>
-<p>あらかじめ下記ページなどを参考に公開鍵と秘密鍵の鍵ペアの作成、公開鍵のGitLab側への登録、その他諸々の設定を済ませておいた。</p>
-<p><a href="https://qiita.com/kyamawaki/items/07fb3332cf3c2f47728a">https://qiita.com/kyamawaki/items/07fb3332cf3c2f47728a</a></p>
-<p>いざクローンしようとすると下記のようなエラーが出てしまう（エラーメッセージはメモしていないので若干違うかも）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Permission denied (publickey).
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Please make sure you have the correct access rights
-</span></span><span class="line"><span class="cl">and the repository exists.
-</span></span></code></pre></div><p>下記ページを参考に~/.ssh/configの修正や鍵ペアの再作成、ssh-agentへの秘密鍵の登録などを試してみるも同じようにエラーが発生…</p>
-<p><a href="https://wing-degital.hatenablog.com/entry/2020/01/03/175752">https://wing-degital.hatenablog.com/entry/2020/01/03/175752</a></p>
-<h2 id="解決方法">解決方法</h2>
-<p>エラーの根本的な原因は、<strong>OpenSSH　8.8を使用していたことでSHA-1ハッシュアルゴリズムを使用するRSA形式の鍵がデフォルトでは使用できなくなっていたこと</strong>。</p>
-<p><a href="https://nulab.com/ja/blog/backlog/disables-rsa-sig-using-the-sha-1-in-openssh">https://nulab.com/ja/blog/backlog/disables-rsa-sig-using-the-sha-1-in-openssh</a></p>
-<p>そのため<strong>ed25519形式で鍵ペアを再作成し、GitLab側への登録など諸々の設定</strong>をすることで無事にレポジトリのクローンができるようになった。</p>
+        <p>本番環境のソース一式をバックアップするときに<strong>tar.gz</strong>に圧縮することがしばしばあります。</p>
+<p>逆にtar.gzをサーバにアップロードして解凍して反映する作業をおこなうこともあります。</p>
+<p>コマンドを時々ど忘れすることがあるので、自分用メモとして残しておきます。</p>
+<h2 id="targzに圧縮">tar.gzに圧縮</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tar -zcvf [作成するtar.gzのファイル名].tar.gz [圧縮したいディレクトリ名]
+</span></span></code></pre></div><p>-z：gzip形式指定
+-c：新規作成
+-v：処理結果出力
+-f：ファイル名指定</p>
+<h2 id="targzを解凍">tar.gzを解凍</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tar -zxvf [解凍するtar.gzのファイル名].tar.gz
+</span></span></code></pre></div><p>-z：gzip形式指定
+-x：ファイル抽出
+-v：処理結果出力
+-f：ファイル名指定</p>
+<h2 id="参考">参考</h2>
+<p><a href="https://atmarkit.itmedia.co.jp/ait/articles/1608/15/news015.html">https://atmarkit.itmedia.co.jp/ait/articles/1608/15/news015.html</a></p>
 
 
         
@@ -285,42 +286,42 @@ if (!doNotTrack) {
     <ul class="share">
       
       <li>
-        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fpost%2fhow-to-solve-the-problem-of-openssh-version-when-connecting-ssh%2f&amp;text=GitLab%e3%81%abSSH%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%80%81OpenSSH%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%81%ae%e5%95%8f%e9%a1%8c%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e6%99%82%e3%81%ae%e8%a7%a3%e6%b1%ba%e3%83%a1%e3%83%a2&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2flinux%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592tar.gz%25E3%2581%25AB%25E5%259C%25A7%25E7%25B8%25AE%25E8%25A7%25A3%25E5%2587%258D%2f&amp;text=Linux%e3%81%a7%e8%a4%87%e6%95%b0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92tar.gz%e3%81%ab%e5%9c%a7%e7%b8%ae%e3%80%81%e8%a7%a3%e5%87%8d&amp;via=" target="_blank" title="Share on Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fpost%2fhow-to-solve-the-problem-of-openssh-version-when-connecting-ssh%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2flinux%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592tar.gz%25E3%2581%25AB%25E5%259C%25A7%25E7%25B8%25AE%25E8%25A7%25A3%25E5%2587%258D%2f" target="_blank" title="Share on Facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2fpost%2fhow-to-solve-the-problem-of-openssh-version-when-connecting-ssh%2f&amp;title=GitLab%e3%81%abSSH%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%80%81OpenSSH%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%81%ae%e5%95%8f%e9%a1%8c%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e6%99%82%e3%81%ae%e8%a7%a3%e6%b1%ba%e3%83%a1%e3%83%a2" target="_blank" title="Share on Reddit">
+        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2flinux%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592tar.gz%25E3%2581%25AB%25E5%259C%25A7%25E7%25B8%25AE%25E8%25A7%25A3%25E5%2587%258D%2f&amp;title=Linux%e3%81%a7%e8%a4%87%e6%95%b0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92tar.gz%e3%81%ab%e5%9c%a7%e7%b8%ae%e3%80%81%e8%a7%a3%e5%87%8d" target="_blank" title="Share on Reddit">
           <i class="fab fa-reddit"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2fpost%2fhow-to-solve-the-problem-of-openssh-version-when-connecting-ssh%2f&amp;title=GitLab%e3%81%abSSH%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%80%81OpenSSH%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%81%ae%e5%95%8f%e9%a1%8c%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e6%99%82%e3%81%ae%e8%a7%a3%e6%b1%ba%e3%83%a1%e3%83%a2" target="_blank" title="Share on LinkedIn">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2flinux%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592tar.gz%25E3%2581%25AB%25E5%259C%25A7%25E7%25B8%25AE%25E8%25A7%25A3%25E5%2587%258D%2f&amp;title=Linux%e3%81%a7%e8%a4%87%e6%95%b0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92tar.gz%e3%81%ab%e5%9c%a7%e7%b8%ae%e3%80%81%e8%a7%a3%e5%87%8d" target="_blank" title="Share on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2fpost%2fhow-to-solve-the-problem-of-openssh-version-when-connecting-ssh%2f&amp;title=GitLab%e3%81%abSSH%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%80%81OpenSSH%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%81%ae%e5%95%8f%e9%a1%8c%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e6%99%82%e3%81%ae%e8%a7%a3%e6%b1%ba%e3%83%a1%e3%83%a2" target="_blank" title="Share on StumbleUpon">
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2flinux%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592tar.gz%25E3%2581%25AB%25E5%259C%25A7%25E7%25B8%25AE%25E8%25A7%25A3%25E5%2587%258D%2f&amp;title=Linux%e3%81%a7%e8%a4%87%e6%95%b0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92tar.gz%e3%81%ab%e5%9c%a7%e7%b8%ae%e3%80%81%e8%a7%a3%e5%87%8d" target="_blank" title="Share on StumbleUpon">
           <i class="fab fa-stumbleupon"></i>
         </a>
       </li>
   
       
       <li>
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2fpost%2fhow-to-solve-the-problem-of-openssh-version-when-connecting-ssh%2f&amp;description=GitLab%e3%81%abSSH%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b%e3%81%a8%e3%81%8d%e3%80%81OpenSSH%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%81%ae%e5%95%8f%e9%a1%8c%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e6%99%82%e3%81%ae%e8%a7%a3%e6%b1%ba%e3%83%a1%e3%83%a2" target="_blank" title="Share on Pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2flinux%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592tar.gz%25E3%2581%25AB%25E5%259C%25A7%25E7%25B8%25AE%25E8%25A7%25A3%25E5%2587%258D%2f&amp;description=Linux%e3%81%a7%e8%a4%87%e6%95%b0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92tar.gz%e3%81%ab%e5%9c%a7%e7%b8%ae%e3%80%81%e8%a7%a3%e5%87%8d" target="_blank" title="Share on Pinterest">
           <i class="fab fa-pinterest"></i>
         </a>
       </li>
@@ -343,12 +344,12 @@ if (!doNotTrack) {
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://redretriever.github.io/post/wordpress-enable-featured-image/" data-toggle="tooltip" data-placement="top" title="WordPressでアイキャッチ画像を有効にしたい">&larr; Previous Post</a>
+              <a href="https://redretriever.github.io/mac-filezilla-file-double-click/" data-toggle="tooltip" data-placement="top" title="Mac版Filezillaでファイルをダブルクリックしたときの挙動を変更">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://redretriever.github.io/post/local-change-wordpress-version/" data-toggle="tooltip" data-placement="top" title="Localを使った環境でWordPressのバージョンを変える">Next Post &rarr;</a>
+              <a href="https://redretriever.github.io/gcp-api-key-use-http-referer-trouble/" data-toggle="tooltip" data-placement="top" title="【GCP】HTTP リファラーでAPIキーの制限をしているときに一部APIでエラーになる">Next Post &rarr;</a>
             </li>
           
         </ul>
