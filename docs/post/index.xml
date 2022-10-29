@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Redretriever Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 18 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jQueryを使って要素が表示されているかをチェックする</title>
+      <link>https://redretriever.github.io/jquery-element-disp-check/</link>
+      <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/jquery-element-disp-check/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PHPで現在定義されている変数を確認する</title>
       <link>https://redretriever.github.io/php-get-defined-vars/</link>

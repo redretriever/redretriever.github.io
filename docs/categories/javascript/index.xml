@@ -6,7 +6,16 @@
     <description>Recent content in JavaScript on Redretriever Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jQueryを使って要素が表示されているかをチェックする</title>
+      <link>https://redretriever.github.io/jquery-element-disp-check/</link>
+      <pubDate>Sat, 29 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/jquery-element-disp-check/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Javascriptのalert、confirmで改行をする</title>
       <link>https://redretriever.github.io/javascript-alert-confirm-linefeed/</link>
