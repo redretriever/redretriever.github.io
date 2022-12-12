@@ -3,11 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://redretriever.github.io/</loc>
-    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://redretriever.github.io/categories/</loc>
-    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://redretriever.github.io/categories/gas/</loc>
+    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://redretriever.github.io/gas-custom-search-api-get-event-info/</loc>
+    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://redretriever.github.io/categories/gcp/</loc>
+    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://redretriever.github.io/post/</loc>
+    <lastmod>2022-12-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://redretriever.github.io/categories/javascript/</loc>
     <lastmod>2022-10-29T00:00:00+00:00</lastmod>
@@ -16,9 +28,6 @@
     <lastmod>2022-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://redretriever.github.io/jquery-element-disp-check/</loc>
-    <lastmod>2022-10-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://redretriever.github.io/post/</loc>
     <lastmod>2022-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://redretriever.github.io/categories/php/</loc>
@@ -49,9 +58,6 @@
     <lastmod>2022-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://redretriever.github.io/gcp-api-key-use-http-referer-trouble/</loc>
-    <lastmod>2021-12-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://redretriever.github.io/categories/gcp/</loc>
     <lastmod>2021-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://redretriever.github.io/categories/linux/</loc>

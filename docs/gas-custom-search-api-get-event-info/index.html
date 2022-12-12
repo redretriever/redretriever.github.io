@@ -7,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Redretriever Note - Redretriever Note</title>
-  <meta name="description" content="このサイトについて 個人的なWebプログラミング（PHP、JavaScript、HTML、CSSなど）のメモをまとめています。">
+  <title>GASとCustom Search APIを使って消防出初式開催情報を収集する - Redretriever Note</title>
   <meta name="author" content="redretriever"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -29,15 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/redretriever.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/redretriever.github.io\/gas-custom-search-api-get-event-info\/",
+          "name": "Gasと custom search apiを使って消防出初式開催情報を収集する"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "redretriever"
+  },
+  "headline": "GASとCustom Search APIを使って消防出初式開催情報を収集する",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  567 ,
+  "datePublished" : "2022-12-12T00:00:00",
+  "dateModified" : "2022-12-12T00:00:00",
+  "image" : "https:\/\/redretriever.github.io\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/gas-custom-search-api-get-event-info\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/redretriever.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/redretriever.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Redretriever Note" />
-<meta property="og:description" content="このサイトについて 個人的なWebプログラミング（PHP、JavaScript、HTML、CSSなど）のメモをまとめています。">
-<meta property="og:url" content="https://redretriever.github.io/" />
+<meta property="og:title" content="GASとCustom Search APIを使って消防出初式開催情報を収集する" />
+<meta property="og:url" content="https://redretriever.github.io/gas-custom-search-api-get-event-info/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Redretriever Note" />
 
-  <meta name="twitter:title" content="Redretriever Note" />
-  <meta name="twitter:description" content="このサイトについて 個人的なWebプログラミング（PHP、JavaScript、HTML、CSSなど）のメモをまとめています。">
+  <meta name="twitter:title" content="GASとCustom Search APIを使って消防出初式開催情報を収集する" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://redretriever.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.103.1" />
@@ -176,14 +221,25 @@ if (!doNotTrack) {
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="post-heading">
               
-                <h1>Redretriever Note</h1>
-              
-              
-                <hr class="small">
+                <h1>GASとCustom Search APIを使って消防出初式開催情報を収集する</h1>
               
               
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on 2022-12-12
+  
+  
+  
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -195,247 +251,123 @@ if (!doNotTrack) {
 
 
     
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-          <div class="well">
-            <h2 id="このサイトについて">このサイトについて</h2>
-<p>個人的なWebプログラミング（PHP、JavaScript、HTML、CSSなど）のメモをまとめています。</p>
-<h2 id="作成したもの">作成したもの</h2>
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Googleの<strong>Custom Search API</strong>と<strong>GAS</strong>を使って、個人的な趣味で毎年見に行っている各地の消防出初式の開催情報を取得、スプレッドシートにまとめていくツールを作成してみた。</p>
+<p>※ソースコード含む各記載内容は、あくまで個人的な趣味で作成したものを公開しているだけのため、一切の責任は負いかねます。</p>
+<h2 id="使用技術やapi">使用技術やAPI</h2>
 <ul>
-<li><a href="https://redretriever.github.io/timelapse-calculation/">タイムラプス計算</a></li>
+<li>GAS（Google Apps Script）</li>
+<li>Googleスプレッドシート</li>
+<li>Google Custom Search API（GCP）</li>
+<li>Custom Search Engine</li>
+</ul>
+<p>各APIなどの準備（GCPのプロジェクト作成やAPIキーの発行）は参考サイトをもとに進めた。</p>
+<h2 id="custom-search-apiで検索結果を取得しスプレッドシートにまとめていく流れ">Custom Search APIで検索結果を取得し、スプレッドシートにまとめていく流れ</h2>
+<p>おおまかには以下の流れで、検索結果の取得からスプレッドシートへ記入をおこなう。<br>
+この流れを定期実行（毎日午前6時〜7時の間に実行されるように、GASトリガーを設定）し、スプレッドシートに情報をまとめていく。その後、手動で不要な情報の整理や追記をおこなう。</p>
+<ul>
+<li>作業するシートを取得</li>
+<li>あらかじめプロパティサービスで登録しておいたAPIキーやキーワードをもとに、Google Custom Search APIで検索結果を取得</li>
+<li>取得した検索結果をもとに、すでに記入済みかや対象となるページ（市町村などの公式ページのみに限定したい）を判定し、スプレッドシートに記入していく</li>
+</ul>
+<p><a href="https://github.com/redretriever/dezomeshiki">ソースコード</a></p>
+<h2 id="参考サイト">参考サイト</h2>
+<p>以下のページを参考に作成。</p>
+<ul>
+<li><a href="https://plus-pm.jp/blog/search-rank-check-use-google-custom-search-api/">https://plus-pm.jp/blog/search-rank-check-use-google-custom-search-api/</a></li>
+<li><a href="https://qiita.com/zak_y/items/42ca0f1ea14f7046108c">https://qiita.com/zak_y/items/42ca0f1ea14f7046108c</a></li>
+<li><a href="https://qiita.com/kingpanda/items/54043eddcf09699ceabc">https://qiita.com/kingpanda/items/54043eddcf09699ceabc</a></li>
 </ul>
 
-          </div>
-        
-
-        <div class="posts-list">
-          
-          
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/javascript-alert-confirm-linefeed/">
-        <h2 class="post-title">Javascriptのalert、confirmで改行をする</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-09-30
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/javascript-alert-confirm-linefeed/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/kintone-get-list-filtering-criteria/">
-        <h2 class="post-title">kintoneの一覧で設定されている絞り込み条件をJavaScriptで取得する</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-08-11
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/kintone-get-list-filtering-criteria/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/add-original-item-to-user-profile/">
-        <h2 class="post-title">WordPressのユーザープロフィールに独自項目（テキストボックス）を追加する</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-08-10
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/add-original-item-to-user-profile/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/wp-add-original-item-to-general-setting/">
-        <h2 class="post-title">WordPressの一般設定に独自項目を追加する</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-08-09
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/wp-add-original-item-to-general-setting/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/jquery-disp-language-switch/">
-        <h2 class="post-title">jQueryを使って簡易的に日英言語切り替えを実装する</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-08-05
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/jquery-disp-language-switch/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/css-img-triming/">
-        <h2 class="post-title">CSSで画像を3:2や16:9、1:1にトリミングする（レスポンシブ対応）</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-07-31
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/css-img-triming/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-        </div>
 
         
-          <ul class="pager main-pager">
-            
-              <li class="previous">
-                <a href="https://redretriever.github.io/page/1/">&larr; Newer Posts</a>
-              </li>
-            
-            
-          </ul>
+
         
-      </div>
-    </div>
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fgas-custom-search-api-get-event-info%2f&amp;text=GAS%e3%81%a8Custom%20Search%20API%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e6%b6%88%e9%98%b2%e5%87%ba%e5%88%9d%e5%bc%8f%e9%96%8b%e5%82%ac%e6%83%85%e5%a0%b1%e3%82%92%e5%8f%8e%e9%9b%86%e3%81%99%e3%82%8b&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fgas-custom-search-api-get-event-info%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fredretriever.github.io%2fgas-custom-search-api-get-event-info%2f&amp;title=GAS%e3%81%a8Custom%20Search%20API%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e6%b6%88%e9%98%b2%e5%87%ba%e5%88%9d%e5%bc%8f%e9%96%8b%e5%82%ac%e6%83%85%e5%a0%b1%e3%82%92%e5%8f%8e%e9%9b%86%e3%81%99%e3%82%8b" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fredretriever.github.io%2fgas-custom-search-api-get-event-info%2f&amp;title=GAS%e3%81%a8Custom%20Search%20API%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e6%b6%88%e9%98%b2%e5%87%ba%e5%88%9d%e5%bc%8f%e9%96%8b%e5%82%ac%e6%83%85%e5%a0%b1%e3%82%92%e5%8f%8e%e9%9b%86%e3%81%99%e3%82%8b" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fredretriever.github.io%2fgas-custom-search-api-get-event-info%2f&amp;title=GAS%e3%81%a8Custom%20Search%20API%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e6%b6%88%e9%98%b2%e5%87%ba%e5%88%9d%e5%bc%8f%e9%96%8b%e5%82%ac%e6%83%85%e5%a0%b1%e3%82%92%e5%8f%8e%e9%9b%86%e3%81%99%e3%82%8b" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fredretriever.github.io%2fgas-custom-search-api-get-event-info%2f&amp;description=GAS%e3%81%a8Custom%20Search%20API%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e6%b6%88%e9%98%b2%e5%87%ba%e5%88%9d%e5%bc%8f%e9%96%8b%e5%82%ac%e6%83%85%e5%a0%b1%e3%82%92%e5%8f%8e%e9%9b%86%e3%81%99%e3%82%8b" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
   </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
 
       
-    <div class="page-meta">
-  
-  
-  
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://redretriever.github.io/jquery-element-disp-check/" data-toggle="tooltip" data-placement="top" title="jQueryを使って要素が表示されているかをチェックする">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
 </div>
 
-
-  
+      
 <footer>
   <div class="container">
     <div class="row">
@@ -452,7 +384,7 @@ if (!doNotTrack) {
               </li>
           
           <li>
-            <a href="/index.xml" title="RSS">
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
