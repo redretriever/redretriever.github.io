@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Redretriever Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://redretriever.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mouse DAIV 4PでWindowsキーが反応しなくなった原因</title>
+      <link>https://redretriever.github.io/mouse-daiv4p-windows-key/</link>
+      <pubDate>Fri, 07 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://redretriever.github.io/mouse-daiv4p-windows-key/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>GASとCustom Search APIを使って消防出初式開催情報を収集する</title>
       <link>https://redretriever.github.io/gas-custom-search-api-get-event-info/</link>
