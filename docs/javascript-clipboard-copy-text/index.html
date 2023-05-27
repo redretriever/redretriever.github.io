@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>jQuery - Redretriever Note</title>
+  <title>JavaScriptで入力した内容をクリップボードにコピーするボタンをつくｒ - Redretriever Note</title>
   <meta name="author" content="redretriever"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -28,13 +28,61 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/redretriever.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/redretriever.github.io\/javascript-clipboard-copy-text\/",
+          "name": "Java scriptで入力した内容をクリップボードにコピーするボタンをつくｒ"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "redretriever"
+  },
+  "headline": "JavaScriptで入力した内容をクリップボードにコピーするボタンをつくｒ",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  196 ,
+  "datePublished" : "2023-05-27T00:00:00",
+  "dateModified" : "2023-05-27T00:00:00",
+  "image" : "https:\/\/redretriever.github.io\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/redretriever.github.io\/javascript-clipboard-copy-text\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/redretriever.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/redretriever.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="jQuery" />
-<meta property="og:url" content="https://redretriever.github.io/categories/jquery/" />
+<meta property="og:title" content="JavaScriptで入力した内容をクリップボードにコピーするボタンをつくｒ" />
+<meta property="og:url" content="https://redretriever.github.io/javascript-clipboard-copy-text/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Redretriever Note" />
 
-  <meta name="twitter:title" content="jQuery" />
+  <meta name="twitter:title" content="JavaScriptで入力した内容をクリップボードにコピーするボタンをつくｒ" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://redretriever.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.111.3">
@@ -170,14 +218,25 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="categories-heading">
+            <div class="post-heading">
               
-                <h1>jQuery</h1>
-              
-              
-                <hr class="small">
+                <h1>JavaScriptで入力した内容をクリップボードにコピーするボタンをつくｒ</h1>
               
               
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on 2023-05-27
+  
+  
+  
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -189,83 +248,89 @@
 
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Vue.JSを使って個人的に使うツールを作成するときに、テキストボックスに入力した内容をボタン押下でクリップボードにコピーする処理を実装した。<br>
+その時の実装サンプルをメモとして残しておく。</p>
+<p>※参考<br>
+<a href="https://developer.mozilla.org/ja/docs/Web/API/Clipboard/writeText">Clipboard.writeText()</a></p>
+<h2 id="javascript">JavaScript</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">createApp</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">input</span><span class="o">:</span> <span class="kc">null</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">copyText</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// テキストボックスの入力内容をクリップボードにコピー
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">navigator</span><span class="p">.</span><span class="nx">clipboard</span><span class="p">.</span><span class="nx">writeText</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">input</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}).</span><span class="nx">mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="html">HTML</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&#34;input&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;copyText()&#34;</span><span class="p">&gt;</span>コピー<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
+
         
-        <div class="posts-list">
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fredretriever.github.io%2fjavascript-clipboard-copy-text%2f&amp;text=JavaScript%e3%81%a7%e5%85%a5%e5%8a%9b%e3%81%97%e3%81%9f%e5%86%85%e5%ae%b9%e3%82%92%e3%82%af%e3%83%aa%e3%83%83%e3%83%97%e3%83%9c%e3%83%bc%e3%83%89%e3%81%ab%e3%82%b3%e3%83%94%e3%83%bc%e3%81%99%e3%82%8b%e3%83%9c%e3%82%bf%e3%83%b3%e3%82%92%e3%81%a4%e3%81%8f%ef%bd%92&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fredretriever.github.io%2fjavascript-clipboard-copy-text%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
           
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/jquery-element-disp-check/">
-        <h2 class="post-title">jQueryを使って要素が表示されているかをチェックする</h2>
-        
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2022-10-29
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/jquery-element-disp-check/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
           
-            <article class="post-preview">
-    <a href="https://redretriever.github.io/jquery-disp-language-switch/">
-        <h2 class="post-title">jQueryを使って簡易的に日英言語切り替えを実装する</h2>
         
-        
-        
-    </a>
+      </article>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on 2021-08-05
-  
-  
-  
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://redretriever.github.io/jquery-disp-language-switch/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
+      
+        <ul class="pager blog-pager">
           
-        </div>
-        
-      </div>
+            <li class="previous">
+              <a href="https://redretriever.github.io/webp-supported-work-memo/" data-toggle="tooltip" data-placement="top" title="WEBP画像対応作業をおこなった際のメモ">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
     </div>
   </div>
+</div>
 
       
 <footer>
@@ -284,7 +349,7 @@
               </li>
           
           <li>
-            <a href="/categories/jquery/index.xml" title="RSS">
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
